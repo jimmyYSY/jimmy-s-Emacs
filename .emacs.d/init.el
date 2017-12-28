@@ -21,6 +21,8 @@
 			 counsel
 			 smartparens
 			 js2-mode
+			 nodejs-repl
+			 exec-path-from-shell
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -35,6 +37,13 @@
   (dolist (pkg jimmy/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
+
+;;mac os 系统node 寻址操作
+;;let emacs could find the execuable 
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+
 
 (require 'hungry-delete)
 (global-hungry-delete-mode)
@@ -104,4 +113,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(js2-external-variable ((t (:foreground "dark gray")))))

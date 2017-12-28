@@ -17,9 +17,10 @@
 			 company
 			 monokai-theme
 			 hungry-delete
-			 smex
 			 swiper
 			 counsel
+			 smartparens
+			 js2-mode
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -38,12 +39,6 @@
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
-
-;;smex config
-(require 'smex) ; Not needed if you use package.el
-(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
-;;(global-set-key (kbd "M-x") 'smex)
-
 ;;swiper config
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -52,8 +47,22 @@
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "<f1> f") 'counsel-describe-function)
-(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "C-h f") 'counsel-describe-function)
+(global-set-key (kbd "C-h v") 'counsel-describe-variable)
+
+;;smartparens config
+(require 'smartparens-config)
+;;局部使用
+;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+;;全局使用
+(smartparens-global-mode t)
+
+;;config js2-mode for js files
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode))
+       auto-mode-alist))
+       
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -95,4 +104,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(js2-external-variable ((t (:foreground "dark gray")))))
