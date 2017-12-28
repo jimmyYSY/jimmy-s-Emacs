@@ -16,6 +16,7 @@
 (defvar jimmy/packages '(
 			 company
 			 monokai-theme
+			 
 			 ) "Default packages")
 
 (defun jimmy/packages-installed-p ()
@@ -27,7 +28,7 @@
   (message "%s" "Refreshing package database...")
   (package-refresh-contents)
   (dolist (pkg jimmy/packages)
-    (when (not (package-install-p pkg))
+    (when (not (package-installed-p pkg))
       (package-install pkg))))
 
 (tool-bar-mode -1)
@@ -50,6 +51,8 @@
 ;;(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 (global-hl-line-mode t)
+(load-theme 'monokai t)
+
 (global-company-mode t)
 (delete-selection-mode t)
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
@@ -59,7 +62,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company))))
+ '(package-selected-packages (quote (monokai-theme company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
