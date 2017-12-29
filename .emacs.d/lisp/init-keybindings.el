@@ -24,7 +24,7 @@
 ;;文本缩进
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 ;;文本补全
-(global-set-key (kbd "C-/") 'hippie-expand)
+;;(global-set-key (kbd "S-/") 'hippie-expand)
 ;;延迟加载dired
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
