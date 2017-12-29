@@ -7,7 +7,7 @@
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 ;;自定义按键
-;;打开init配置文件
+;;打开init 配置文件
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 ;;打开文件列表
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
