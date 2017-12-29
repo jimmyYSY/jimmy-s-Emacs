@@ -43,7 +43,6 @@
 (global-hungry-delete-mode)
 
 ;;smartparens config
-(require 'smartparens-config)
 ;;局部使用
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局使用
