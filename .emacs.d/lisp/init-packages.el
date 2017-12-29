@@ -19,6 +19,7 @@
 			 nodejs-repl
 			 exec-path-from-shell
 			 popwin
+			 reveal-in-osx-finder
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 

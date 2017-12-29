@@ -49,6 +49,32 @@
       (progn
 	(indent-buffer)
 	(message "Indented buffer.")))))
+;;代码补全功能增强 
+(setq hippie-expand-try-functions-list '(try-expand-dabbrev
+					 try-expand-dabbrev-all-buffers
+					 try-expand-dabbrev-from-kill
+					 try-complete-file-name-partially
+					 try-complete-file-name
+					 try-expand-all-abbrevs
+					 try-expand-list
+					 try-expand-line
+					 try-complete-lisp-symbol-partially
+					 try-complete-lisp-symbol))
+
+;;修改询问yes or no 为 y or n
+(fset 'yse-or-no-p 'y-or-n-p)
+;;不再询问是否需要递归删除文件目录 或者 拷贝文件目录
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+
+;;不在重复生成dired-buffer
+(put 'dired-find-alternate-file 'disabled nil)
+;;添加C-x C-j 打开当前文件列表
+(require 'dired-x)
+;;添加同级窗口自动选择copy路径
+(setq dired-dwim-target t)
+
+
 
 
 (provide 'init-better-defaults)

@@ -1,0 +1,13 @@
+* keyboards
+** file operation
+ C-x d : open file list
+ + : to create directory
+ C-x C-f : to create file
+ g : to refersh dired buffer
+ C : copy file
+ d : mark the file as deleted
+ D : delete file after confirm
+ R : rename file
+ C-x C-j : open the current file buffer
+ C-x C-r : open the cache file list
+ 
