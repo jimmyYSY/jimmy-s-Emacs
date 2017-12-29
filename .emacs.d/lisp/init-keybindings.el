@@ -21,6 +21,7 @@
 (global-set-key (kbd "C-h C-v") 'find-variable)
 ;;查找快捷键定义
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
-
+;;文本缩进
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 (provide 'init-keybindings)
 
