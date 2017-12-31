@@ -20,6 +20,7 @@
 			 exec-path-from-shell
 			 popwin
 			 reveal-in-osx-finder
+			 web-mode
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -48,6 +49,7 @@
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局使用
 (smartparens-global-mode t)
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;;swiper config
 (ivy-mode 1)
@@ -56,10 +58,34 @@
 ;;config js2-mode for js files
 (setq auto-mode-alist
       (append
-       '(("\\.js\\'" . js2-mode))
+       '(("\\.js\\'" . js2-mode)
+	 ("\\.html\\'" . web-mode))
        auto-mode-alist))
 
 (global-company-mode t)
+
+;;config for web mode
+(defun my-web-mode-indent-setup ()
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
+
+(add-hook 'web-mode-hook 'my-web-mode-indent-setup)
+
+;;两个空格和四个空格之间切换
+(defun my-toggle-web-indent ()
+  (interactive)
+  ;; web development
+  (if (or (eq major-mode 'js-mode) (eq major-mode 'js2-mode))
+      (progn
+	(setq js-indent-level (if (= js-indent-level 2) 4 2))
+	(setq js2-basic-offset (if (= js2-basic-offset 2) 4 2))))
+  (if (eq major-mode 'web-mode)
+      (progn
+	(setq web-mode-markup-indent-offset (if (= web-mode-markup-indent-offset 2) 4 2))
+	(setq web-mode-css-indent-offset (if (= web-mode-css-indent-offset 2) 4 2))
+	(setq web-mode-code-indent-offset (if (= web-mode-code-indent-offset 2) 4 2) 4 2)))
+  (setq indent-tabs-mode nil))
 
 (load-theme 'monokai t)
 

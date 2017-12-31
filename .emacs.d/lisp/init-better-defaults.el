@@ -23,11 +23,19 @@
 (setq auto-save-default nil)
 
 ;;缓存文件列表 最大25个文件
-(require 'recentf)
-;;(recentf-mode 1)
+;;(require 'recentf)
+(recentf-mode 1)
 (setq recentf-max-menu-items 25)
+;;补全括号够能，语句内显示两侧括号
+(define-advice show-paren-function(:around (fn) fix-show-paren-function)
+  "HighLight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
 ;;显示对应括号
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
 ;;自动缩进
 (electric-indent-mode 1)
 ;;删除全部空格
@@ -73,8 +81,17 @@
 (require 'dired-x)
 ;;添加同级窗口自动选择copy路径
 (setq dired-dwim-target t)
-
-
-
+;;隐藏dos编码换行符
+(defun hidden-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+;;删除dos/unix编码换行符
+(defun remove-dos-eol ()
+  "Replace DOS eolns CR LF with Unix eolns CR"
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
 
 (provide 'init-better-defaults)

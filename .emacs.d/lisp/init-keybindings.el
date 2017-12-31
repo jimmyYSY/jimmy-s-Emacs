@@ -24,7 +24,10 @@
 ;;文本缩进
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 ;;文本补全
-;;(global-set-key (kbd "S-/") 'hippie-expand)
+(global-set-key (kbd "M-/") 'hippie-expand)
+;;tab制表位缩进 2/4 切换
+(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
+
 ;;延迟加载dired
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))

@@ -28,3 +28,23 @@ git push
 git pull
 git log
 exit
+git status
+git add .
+git commit -m "纵使疾风起，人生不言弃“
+
+
+
+
+
+
+exit
+git 
+shell
+exit()
+git log
+git status
+git commit -m "add pic zong shi ji feng qi ren sheng bu yan qi "
+git pull
+git push
+git log
+exit
