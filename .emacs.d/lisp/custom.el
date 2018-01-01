@@ -6,6 +6,8 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 1)
+ '(popwin:popup-window-position (quote right))
+ '(popwin:popup-window-width 90)
  '(send-mail-function (quote mailclient-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

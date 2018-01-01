@@ -93,5 +93,19 @@
   (interactive)
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
+;;增强occur默认为光标选中，或者当前光标所在单词
+(defun occur-dwim ()
+  "Call 'occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym))))
+	regexp-history)
+  (call-interactively 'occur))
+
+
 
 (provide 'init-better-defaults)

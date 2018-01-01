@@ -1,4 +1,4 @@
-;;(package-initialize)
+﻿;;(package-initialize)
 ;;备份文件
 ;;(setq make-backup-files nil)
 ;;禁止自动保存
@@ -21,6 +21,10 @@
 			 popwin
 			 reveal-in-osx-finder
 			 web-mode
+			 js2-refactor
+                         expand-region
+			 iedit
+			 org-pomodoro
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -86,11 +90,38 @@
 	(setq web-mode-css-indent-offset (if (= web-mode-css-indent-offset 2) 4 2))
 	(setq web-mode-code-indent-offset (if (= web-mode-code-indent-offset 2) 4 2) 4 2)))
   (setq indent-tabs-mode nil))
+;;tab制表位缩进 2/4 切换
+(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
+
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+;;js2r mode开启
+(js2r-add-keybindings-with-prefix "C-c C-m")
+
+(defun js2-imenu-make-index ()
+  (interactive)
+  (save-excursion
+    ;; (setq imenu-generic-expression '((nil "describe\\(\"\\(.+\\)\"" 1)))
+    (imenu--generic-function '(("describe" "\\s-*describe\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*)" 1)
+                               ("it" "\\s-*it\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("test" "\\s-*test\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("before" "\\s-*before\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("after" "\\s-*after\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("Function" "function[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*(" 1)
+                               ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(" 1)
+                               ("Function" "^var[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(" 1)
+                               ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*()[ \t]*{" 1)
+                               ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*:[ \t]*function[ \t]*(" 1)
+                               ("Task" "[. \t]task([ \t]*['\"]\\([^'\"]+\\)" 1)))))
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (setq imenu-create-index-function 'js2-imenu-make-index)))
 
 (load-theme 'monokai t)
 
 ;;popwin config
 (require 'popwin)
 (popwin-mode t)
+;;选中文件内容
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 (provide 'init-packages)
