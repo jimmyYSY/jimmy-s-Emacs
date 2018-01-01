@@ -29,7 +29,16 @@
 (global-set-key (kbd "M-s o") 'occur-dwim)
 ;;imenu自定义按键
 ;;(global-set-key (kbd "M-s i") 'counsel-imenu)
-;;延迟加载dired
+;;r aka remember
+;;(global-set-key (kbd "C-c r") 'org-capture)
+;;延迟加载dire
+;;js2r mode开启
+(js2r-add-keybindings-with-prefix "C-c C-m")
+;;tab制表位缩进 2/4 切换
+(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
+;;选中文件内容
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 

@@ -124,4 +124,6 @@
 ;;选中文件内容
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+(require 'org-pomodoro)
+
 (provide 'init-packages)
