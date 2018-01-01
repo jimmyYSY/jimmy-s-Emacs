@@ -12,6 +12,7 @@
  C-x C-r : open the cache file list
  C-x b : open buffer list 
  M-; : comment this section of code 
+ C-x C-q : edit mode
 ** 程序
    C-x C-z 挂起程序
    C-x C-c 退出程序

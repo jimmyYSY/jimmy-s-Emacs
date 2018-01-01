@@ -38,6 +38,15 @@
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 ;;选中文件内容
 (global-set-key (kbd "C-=") 'er/expand-region)
+;;修改company 按键 为C-n 和 C-p选择
+;; (with-eval-after-load 'company
+;;   (define-key company-active-map (kbd "M-n") nil)
+;;   (define-key company-active-map (kbd "M-p") nil)
+;;   (define-key company-active-map (kbd "C-n") #'company-select-next)
+;;   (define-key company-active-map (kbd "C-p") #'company-select-previous))
+
+;;iedit mode
+(global-set-key (kbd "C-;") 'iedit-mode)
 
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))

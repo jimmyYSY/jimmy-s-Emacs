@@ -48,3 +48,25 @@ git pull
 git push
 git log
 exit
+git status
+git add.
+git add .
+git commit -m "add hot key , web-mode and web-mode config strengthen the parentheses corresponding method"
+git push
+git pull
+git status
+git log
+git status
+git status
+git add .
+git commit -m "add org configs add iedit-mode add expand-region ... "
+git push
+git status
+git log
+git status
+git add .
+git commit -m "add org changes and mobile keyboards"
+git push
+git log
+pacman-Su
+exit

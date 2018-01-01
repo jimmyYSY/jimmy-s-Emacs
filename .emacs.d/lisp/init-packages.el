@@ -25,6 +25,7 @@
                          expand-region
 			 iedit
 			 org-pomodoro
+                         helm-ag
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -90,12 +91,8 @@
 	(setq web-mode-css-indent-offset (if (= web-mode-css-indent-offset 2) 4 2))
 	(setq web-mode-code-indent-offset (if (= web-mode-code-indent-offset 2) 4 2) 4 2)))
   (setq indent-tabs-mode nil))
-;;tab制表位缩进 2/4 切换
-(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
-;;js2r mode开启
-(js2r-add-keybindings-with-prefix "C-c C-m")
 
 (defun js2-imenu-make-index ()
   (interactive)
@@ -121,8 +118,6 @@
 ;;popwin config
 (require 'popwin)
 (popwin-mode t)
-;;选中文件内容
-(global-set-key (kbd "C-=") 'er/expand-region)
 
 (require 'org-pomodoro)
 
