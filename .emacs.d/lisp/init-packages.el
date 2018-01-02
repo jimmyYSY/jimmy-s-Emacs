@@ -26,6 +26,11 @@
 			 iedit
 			 org-pomodoro
                          helm-ag
+			 jsx-mode
+			 angular-mode
+			 ng2-mode
+			 ag
+			 exec-path-from-shell
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -64,7 +69,8 @@
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode)
-	 ("\\.html\\'" . web-mode))
+	 ("\\.html\\'" . web-mode)
+	 ("\\.jsx\\'" . jsx-mode))
        auto-mode-alist))
 
 (global-company-mode t)
@@ -118,7 +124,7 @@
 ;;popwin config
 (require 'popwin)
 (popwin-mode t)
-
+(add-to-list 'exec-path "d:/msys64/mingw64/bin")
 (require 'org-pomodoro)
 
 (provide 'init-packages)

@@ -70,3 +70,14 @@ git push
 git log
 pacman-Su
 exit
+pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
+pacman -Sy
+pacman -Syu
+pacman -Su
+pacman -S mingw-w64-x86_64-ag
+pacman -S mingw-w64-x86_64-ag
+ag
+bash
+pacman -Syu
+pacman -S git
+pacman -S git
