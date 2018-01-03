@@ -33,6 +33,7 @@
 			 exec-path-from-shell
 			 projectile
 			 flycheck
+			 auto-yasnippet
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -61,8 +62,9 @@
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局使用
 (smartparens-global-mode t)
-(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
 ;;swiper config
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -130,5 +132,9 @@
 (require 'org-pomodoro)
 
 (add-hook 'js2-mode 'flycheck-mode)
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
 
 (provide 'init-packages)

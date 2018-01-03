@@ -1,0 +1,5 @@
+* bug 列表
+** init-packages.el 
+启动报错
+
+
