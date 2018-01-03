@@ -31,6 +31,7 @@
 			 ng2-mode
 			 ag
 			 exec-path-from-shell
+			 projectile
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 

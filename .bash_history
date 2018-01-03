@@ -81,3 +81,16 @@ bash
 pacman -Syu
 pacman -S git
 pacman -S git
+git satatus
+git status
+git checkout .
+git logs
+git pull
+git status
+git add .
+git commit -m "修复ag使用  使用的时候修改ag引用路径"
+git status
+git pull
+git log
+git pull
+exit
