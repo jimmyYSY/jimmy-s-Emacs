@@ -32,6 +32,7 @@
 			 ag
 			 exec-path-from-shell
 			 projectile
+			 flycheck
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -127,5 +128,7 @@
 (popwin-mode t)
 (add-to-list 'exec-path "d:/msys64/mingw64/bin")
 (require 'org-pomodoro)
+
+(add-hook 'js2-mode 'flycheck-mode)
 
 (provide 'init-packages)
