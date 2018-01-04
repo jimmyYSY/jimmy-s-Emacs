@@ -34,6 +34,9 @@
 			 projectile
 			 flycheck
 			 auto-yasnippet
+			 window-numbering
+			 which-key
+			 use-package
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -136,5 +139,8 @@
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
+(window-numbering-mode 1)
+
+(which-key-mode 1)
 
 (provide 'init-packages)

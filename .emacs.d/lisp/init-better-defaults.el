@@ -107,7 +107,7 @@
   (call-interactively 'occur))
 
 ;; 设置默认编码为 utf-8
-;;(set-language-environment "UTF-8")
+;;(set-language-environment "utf-8-dos")
 ;;mac copy chrome url
 (defun jimmy/insert-chrome-current-tab-url()
   "Get the URL of the active tab of the first window"
