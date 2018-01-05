@@ -9,7 +9,7 @@
  '(org-pomodoro-long-break-length 40)
  '(package-selected-packages
    (quote
-    (use-package which-key company monokai-theme hungry-delete swiper counsel smartparens js2-mode nodejs-repl popwin reveal-in-osx-finder web-mode js2-refactor expand-region iedit org-pomodoro helm-ag)))
+    (2048-game use-package which-key company monokai-theme hungry-delete swiper counsel smartparens js2-mode nodejs-repl popwin reveal-in-osx-finder web-mode js2-refactor expand-region iedit org-pomodoro helm-ag)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 90)
  '(send-mail-function (quote mailclient-send-it)))

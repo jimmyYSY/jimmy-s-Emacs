@@ -35,7 +35,6 @@
 	     (funcall fn)))))
 ;;显示对应括号
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-
 ;;自动缩进
 (electric-indent-mode 1)
 ;;删除全部空格
@@ -70,7 +69,7 @@
 					 try-complete-lisp-symbol))
 
 ;;修改询问yes or no 为 y or n
-(fset 'yse-or-no-p 'y-or-n-p)
+(fset 'yes-or-no-p 'y-or-n-p)
 ;;不再询问是否需要递归删除文件目录 或者 拷贝文件目录
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)

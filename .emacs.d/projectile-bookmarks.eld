@@ -1,1 +1,1 @@
-("~/")
+("d:/nginx-1.12.0/html/Compliance/" "~/")

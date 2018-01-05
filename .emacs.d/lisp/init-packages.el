@@ -37,6 +37,7 @@
 			 window-numbering
 			 which-key
 			 use-package
+			 company-anaconda
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -125,6 +126,11 @@
 (add-hook 'js2-mode-hook
           (lambda ()
             (setq imenu-create-index-function 'js2-imenu-make-index)))
+
+(add-hook 'python-mode-hook
+	  (lambda()
+	    (set (make-local-variable 'company-backends ) '((company-anaconda company-dabbrev-code) company-dabbrev))))
+
 
 (load-theme 'monokai t)
 

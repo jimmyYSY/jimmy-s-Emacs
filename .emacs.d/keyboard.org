@@ -213,3 +213,6 @@
    C-h b    列出目前所有的快捷键。
    C-h m   列出目前的mode的特殊说明.
    C-c C-h 列出以C-c 开头的所有快捷键. 
+** 指令
+切换 最大化窗口
+toggle-frame-maximized

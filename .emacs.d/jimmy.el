@@ -1,6 +1,4 @@
 
-(package-initialize)
-
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 (defun open-my-init-file()
@@ -21,3 +19,6 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (load-file custom-file)
+
+(setq tramp-ssh-controlmaster-options
+      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")

@@ -10,6 +10,9 @@
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 ;;显示行数
 (global-hl-line-mode t)
-
+;;启动时间显示
+(display-time-mode t)
+;;使用24小时制
+(setq display-time-24hr-format t)
 
 (provide 'init-ui)
