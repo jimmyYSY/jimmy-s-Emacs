@@ -215,4 +215,7 @@
    C-c C-h 列出以C-c 开头的所有快捷键. 
 ** 指令
 切换 最大化窗口
-toggle-frame-maximized
+  toggle-frame-maximized
+
+指定编码重新读入文件，以便正常显示；
+  revert-buffer-with-coding-system
