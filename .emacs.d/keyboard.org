@@ -219,3 +219,5 @@
 
 指定编码重新读入文件，以便正常显示；
   revert-buffer-with-coding-system
+设定下一步操作的编码格式
+ universal-coding-system-argument
