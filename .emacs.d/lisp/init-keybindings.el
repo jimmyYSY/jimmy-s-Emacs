@@ -44,7 +44,10 @@
 ;;   (define-key company-active-map (kbd "M-p") nil)
 ;;   (define-key company-active-map (kbd "C-n") #'company-select-next)
 ;;   (define-key company-active-map (kbd "C-p") #'company-select-previous))
-
+;;Enlarge current window
+(global-set-key (kbd "C-}") 'enlarge-window-horizontally)
+;;shrink current window
+(global-set-key (kbd "C-{") 'shrink-window-horizontally)
 ;;iedit mode
 (global-set-key (kbd "C-;") 'iedit-mode)
 

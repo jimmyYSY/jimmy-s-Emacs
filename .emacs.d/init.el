@@ -18,3 +18,4 @@
 (require 'org-install)
 (require 'ob-tangle)
 (org-babel-load-file (expand-file-name "jimmy.org" user-emacs-directory))
+(put 'scroll-left 'disabled nil)
