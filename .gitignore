@@ -1,1 +1,2 @@
-.BigNox/ # lose sight of this files
+.BigNox/* # lose sight of this files
+.viminfo # lose singht of .viminfo
