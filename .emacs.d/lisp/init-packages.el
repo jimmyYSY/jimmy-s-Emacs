@@ -132,7 +132,8 @@
 	    (set (make-local-variable 'company-backends ) '((company-anaconda company-dabbrev-code) company-dabbrev))))
 
 
-(load-theme 'monokai t)
+;;(load-theme 'monokai t)
+(load-theme 'manoj-dark t)
 
 ;;popwin config
 (require 'popwin)
