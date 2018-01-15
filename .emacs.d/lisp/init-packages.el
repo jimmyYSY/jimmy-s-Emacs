@@ -38,6 +38,8 @@
 			 which-key
 			 use-package
 			 company-anaconda
+			 typescript-mode
+			 magit
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 

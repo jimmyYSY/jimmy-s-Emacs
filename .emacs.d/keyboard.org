@@ -26,7 +26,9 @@
    C-x s   保存所有
    C-x i   将文件的内容插入
    M-x revert-buffer    恢复到原始状态
-   
+   M-x make-directory      使用指令新建文件或文件夹
+   M-x delete-directory    使用指令删除文件夹
+   C-x C-q                 解除文件只读模式   
 ** 跳转
    前/后     单位
    C-f/b    字
@@ -221,3 +223,5 @@
   revert-buffer-with-coding-system
 设定下一步操作的编码格式
  universal-coding-system-argument
+打开对应HTML标签高亮提示
+ M-x web-mode-toggle-element-highlight
