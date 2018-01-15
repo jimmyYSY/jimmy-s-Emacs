@@ -94,3 +94,23 @@ git pull
 git log
 git pull
 exit
+git log
+git pull
+git status
+git status
+git status
+git add .gitignore 
+git status
+git status
+vi .gitignore
+git status
+vi .gitignore
+vi .gitignore
+git status
+exit
+touch .gitignore
+vi .gitignore 
+vi .gitignore
+vi .gitignore 
+vi .gitignore 
+vi .gitignore 
