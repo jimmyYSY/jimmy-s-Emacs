@@ -105,13 +105,26 @@
 	regexp-history)
   (call-interactively 'occur))
 
+;;设置代码注释增强为不选择文本则注释当前行
+(defun my-comment-or-uncomment-region (beg end &optional arg)    
+  (interactive (if (use-region-p)    
+                   (list (region-beginning) (region-end) nil)    
+                 (list (line-beginning-position)    
+                       (line-beginning-position 2))))    
+  (comment-or-uncomment-region beg end arg)    
+)
+
 ;; 设置默认编码为 utf-8
+(setq default-buffer-file-coding-system 'utf-8-emacs-dos)
+;;Default coding system (for new files)
+;;默认buffer编码是utf-8,(写文件)
 ;;(set-language-environment "utf-8-dos")
 ;;mac copy chrome url
 (defun jimmy/insert-chrome-current-tab-url()
   "Get the URL of the active tab of the first window"
   (interactive)
   (insert (jimmy/retrieve-chrome-current-tab-url)))
+
 
 (defun jimmy/retrieve-chrome-current-tab-url()
   "Get the URL of the active tab of the first window"

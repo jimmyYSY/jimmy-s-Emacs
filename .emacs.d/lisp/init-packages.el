@@ -25,11 +25,9 @@
                          expand-region
 			 iedit
 			 org-pomodoro
-                         helm-ag
 			 jsx-mode
 			 angular-mode
 			 ng2-mode
-			 ag
 			 exec-path-from-shell
 			 projectile
 			 flycheck
@@ -40,6 +38,7 @@
 			 company-anaconda
 			 typescript-mode
 			 magit
+			 ivy
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -68,6 +67,12 @@
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局使用
 (smartparens-global-mode t)
+
+;;默认启用ivy-mode
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+
 
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 (sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)

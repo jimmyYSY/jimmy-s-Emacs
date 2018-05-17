@@ -5,6 +5,24 @@
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
+;;ivy mode 设置
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> l") 'counsel-find-library)
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
 
 ;;自定义按键
 ;;打开init 配置文件
@@ -29,7 +47,7 @@
 (global-set-key (kbd "M-s o") 'occur-dwim)
 ;;imenu自定义按键
 ;;(global-set-key (kbd "M-s i") 'counsel-imenu)
-;;r aka remember
+;;raka remember
 ;;(global-set-key (kbd "C-c r") 'org-capture)
 ;;延迟加载dire
 ;;js2r mode开启
@@ -38,6 +56,8 @@
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 ;;选中文件内容
 (global-set-key (kbd "C-=") 'er/expand-region)
+;;注释
+(global-set-key (kbd "C-c /") 'my-comment-or-uncomment-region)
 ;;修改company 按键 为C-n 和 C-p选择
 ;; (with-eval-after-load 'company
 ;;   (define-key company-active-map (kbd "M-n") nil)
