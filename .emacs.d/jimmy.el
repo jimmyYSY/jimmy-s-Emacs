@@ -11,10 +11,12 @@
 ;; (require 'init-func.el)
 
 (require 'init-packages)
+(require 'alpha-window)
 (require 'init-ui)
 (require 'init-org)
 (require 'init-better-defaults)
 (require 'init-keybindings)
+
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 

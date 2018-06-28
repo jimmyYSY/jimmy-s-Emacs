@@ -39,6 +39,7 @@
 			 typescript-mode
 			 magit
 			 ivy
+			 markdown-mode
 			 ) "Default packages")
 (setq package-selected-packages jimmy/packages)
 
@@ -137,6 +138,14 @@
 (add-hook 'python-mode-hook
 	  (lambda()
 	    (set (make-local-variable 'company-backends ) '((company-anaconda company-dabbrev-code) company-dabbrev))))
+
+;;markdown文件使用markdown-mode模块
+(use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
 
 
 ;;(load-theme 'monokai t)

@@ -43,6 +43,8 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 ;;文本补全
 (global-set-key (kbd "M-/") 'hippie-expand)
+;;复制文本
+;;(global-set-key (kbd "M-w") 'kill-ring-save))
 ;;增强occur 按键
 (global-set-key (kbd "M-s o") 'occur-dwim)
 ;;imenu自定义按键

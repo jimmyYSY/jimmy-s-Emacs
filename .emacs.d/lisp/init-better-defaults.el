@@ -33,6 +33,19 @@
 	(t (save-excursion
 	     (ignore-errors (backward-up-list))
 	     (funcall fn)))))
+
+
+;;设置emacs支持中文
+(set-language-environment 'Chinese-GB)
+(set-keyboard-coding-system 'euc-cn)
+(set-clipboard-coding-system 'euc-cn)
+(set-terminal-coding-system 'euc-cn)
+(set-buffer-file-coding-system 'euc-cn)
+(set-selection-coding-system 'euc-cn)
+(prefer-coding-system 'euc-cn)
+(setq default-process-coding-system 'euc-cn)
+(setq-default pathname-coding-system 'euc-cn)
+
 ;;显示对应括号
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;;自动缩进
