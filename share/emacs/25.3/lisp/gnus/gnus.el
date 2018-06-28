@@ -4429,6 +4429,8 @@ prompt the user for the name of an NNTP server to use."
 (declare-function debbugs-gnu "ext:debbugs-gnu"
 		  (severities &optional packages archivedp suppress tags))
 
+
+
 (defun gnus-list-debbugs ()
   "List all open Gnus bug reports."
   (interactive)
@@ -4440,5 +4442,4 @@ prompt the user for the name of an NNTP server to use."
 (gnus-ems-redefine)
 
 (provide 'gnus)
-
 ;;; gnus.el ends here

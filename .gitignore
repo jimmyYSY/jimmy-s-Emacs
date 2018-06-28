@@ -8,3 +8,15 @@
 .emacs.d/projectile-bookmarks.eld
 .emacs.d/.org-id-locations
 .bash_history
+.emacs.d/auto-save-list/
+.emacs.d/elpa/
+*.el~
+.emacs.d/eshell/lastdir
+.emacs.d/eshell/
+.ssh/known_hosts
+.lesshst
+.gnupg/pubring.gpg
+.gnupg/secring.gpg
+.gnupg/gpg.conf
+.minttyrc
+.config/git/gitk

@@ -6,3 +6,6 @@
 [user]
 	name = jimmy
 	email = jimmy_ysy@163.com
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\jimmy\\Documents\\gitignore_global.txt
