@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "angular-html-mode" "angular-html-mode.el"
-;;;;;;  (23115 16620 0 0))
+;;;;;;  (23349 39224 0 0))
 ;;; Generated autoloads from angular-html-mode.el
 
 (autoload 'angular-html-mode "angular-html-mode" "\
@@ -15,7 +15,7 @@ Major HTML mode for AngularJS.
 
 ;;;***
 
-;;;### (autoloads nil "angular-mode" "angular-mode.el" (23115 16620
+;;;### (autoloads nil "angular-mode" "angular-mode.el" (23349 39225
 ;;;;;;  0 0))
 ;;; Generated autoloads from angular-mode.el
 
@@ -27,7 +27,7 @@ Major mode for AngularJS.
 
 ;;;***
 
-;;;### (autoloads nil nil ("angular-mode-pkg.el") (23115 16620 0
+;;;### (autoloads nil nil ("angular-mode-pkg.el") (23349 39225 0
 ;;;;;;  0))
 
 ;;;***

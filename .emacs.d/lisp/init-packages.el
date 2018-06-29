@@ -37,7 +37,6 @@
 			 use-package
 			 company-anaconda
 			 typescript-mode
-			 magit
 			 ivy
 			 markdown-mode
 			 ) "Default packages")
@@ -55,6 +54,7 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+
 ;;mac os 系统node 寻址操作
 ;;let emacs could find the execuable 
 (when (memq window-system '(mac ns))
@@ -68,7 +68,8 @@
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局使用
 (smartparens-global-mode t)
-
+;;起用projectile-mode
+(projectile-mode t)
 ;;默认启用ivy-mode
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)

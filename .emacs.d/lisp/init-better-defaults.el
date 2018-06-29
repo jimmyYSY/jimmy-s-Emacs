@@ -10,12 +10,16 @@
 (abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table '(
 					    ;; signature
-					    ("1j" "jimmy")
+					    ("jim" "jimmy")
 					    ;;emacs regex
 					    ;;163邮箱地址
 					    ("jemail" "jimmy_ysy@163.com")
 					    ;;google邮箱地址
 					    ("jgmail" "jimmy.shiyuy@gmail.com")
+					    ;;tel
+					    ("jtel" "13041102857")
+					    ;;qq
+					    ("qq" "2806446853")
 					    ))
 ;;禁止备份文件
 (setq make-backup-files nil)
@@ -23,7 +27,7 @@
 (setq auto-save-default nil)
 
 ;;缓存文件列表 最大25个文件
-;;(require 'recentf)
+(require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 ;;补全括号够能，语句内显示两侧括号
@@ -34,18 +38,21 @@
 	     (ignore-errors (backward-up-list))
 	     (funcall fn)))))
 
-
 ;;设置emacs支持中文
-(set-language-environment 'Chinese-GB)
-(set-keyboard-coding-system 'euc-cn)
-(set-clipboard-coding-system 'euc-cn)
-(set-terminal-coding-system 'euc-cn)
-(set-buffer-file-coding-system 'euc-cn)
-(set-selection-coding-system 'euc-cn)
-(prefer-coding-system 'euc-cn)
-(setq default-process-coding-system 'euc-cn)
-(setq-default pathname-coding-system 'euc-cn)
+;; (set-language-environment 'Chinese-GB)
+;; (set-keyboard-coding-system 'euc-cn)
+;; (set-clipboard-coding-system 'euc-cn)
+;; (set-terminal-coding-system 'euc-cn)
+;; (set-buffer-file-coding-system 'euc-cn)
+;; (set-selection-coding-system 'euc-cn)
+;; (prefer-coding-system 'euc-cn)
+;; (setq default-process-coding-system 'euc-cn)
+;; (setq-default pathname-coding-system 'euc-cn)
 
+;;设定删除保存记录为200，可以方便以后无限恢复 
+(setq kill-ring-max 200) 
+;;允许自动打开图片，如wiki里面 
+(auto-image-file-mode) 
 ;;显示对应括号
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 ;;自动缩进
@@ -83,6 +90,8 @@
 
 ;;修改询问yes or no 为 y or n
 (fset 'yes-or-no-p 'y-or-n-p)
+;;鼠标自动避开指针，如当你输入的时候，指针到了鼠标的位置，鼠标有点挡住视线了 
+(mouse-avoidance-mode 'animate) 
 ;;不再询问是否需要递归删除文件目录 或者 拷贝文件目录
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)
