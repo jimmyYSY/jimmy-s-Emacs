@@ -1,3 +1,54 @@
+vi .gitignore
+git status
+vi .gitignore
+vi .gitignore
+git status
+exit
+touch .gitignore
+vi .gitignore 
+vi .gitignore
+vi .gitignore 
+vi .gitignore 
+vi .gitignore 
+rg =v
+rg
+cargo install ripgrep
+pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime
+exit
+pacman -Syu
+pacman -S ripgrep
+git status
+git add public/css/programme.css
+git status
+git commit -m "添加radio样式，主播上传音频部分"
+git push
+git push origin/develop
+git push origin/develop
+git log
+git push origin/develop
+git push origin/develop HEAD
+git push origin/develop HEAD:HEAD
+git push origin/develop
+git branch
+git push origin develop
+git push origin/develop HEAD:origin/develop
+git pull
+git pull origin/develop
+git pull
+git pull origin/develop
+git pull develop
+git checkout .
+git status
+git git pull
+git pull
+git pull origin/develop
+git branch
+git checkout origin/develop
+git branch origin/develop 6748b8a
+git pull
+git pull origin/develop
+git status
+git log
 git status
 git checkout .
 git pull origin/develop
@@ -447,54 +498,3 @@ git add .emacs.d/jimmy.el
 git status
 git add .emacs.d/lisp/*
 git status
-git status
-git reset .emacs.d/lisp/alpha-window.el~
-git status
-git commit -m "add new file for transform window,and some settings"
-git push
-git log
-exit
-yum
-wget
-wget install -y unzip zip
-pacman -S zip
-pacman -S unzip
-zip
-unzip
-exit
-cd F:
-ls
-cd HuaWeiMusicCMS
-gulp build
-npm 
-node
-pacman -S nvm
-zip public HuaWeiMusicCMSOnLine.zip
-zip public
-ls -al
-cd public.zip
-./public
-./public.zip
-exit
-cd F:
-ls
-cd HuaWeiMusicCp
-gulp
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs --debug-init
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs
-emacs

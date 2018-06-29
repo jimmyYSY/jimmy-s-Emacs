@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "let-alist" "let-alist.el" (23349 39253 0 0))
+;;;### (autoloads nil "let-alist" "let-alist.el" (23132 4070 0 0))
 ;;; Generated autoloads from let-alist.el
 
 (autoload 'let-alist "let-alist" "\
@@ -38,6 +38,10 @@ displayed in the example above.
 \(fn ALIST &rest BODY)" nil t)
 
 (function-put 'let-alist 'lisp-indent-function '1)
+
+;;;***
+
+;;;### (autoloads nil nil ("let-alist-pkg.el") (23132 4066 0 0))
 
 ;;;***
 

@@ -25,10 +25,6 @@
 
 
 ;;自定义按键
-;;选择文本
-(global-set-key (kbd "M-SPC") 'set-mark-command)
-;;更改复制快捷键
-(global-set-key (kbd "C-c C-w") 'kill-ring-save)
 ;;打开init 配置文件
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 ;;打开文件列表
