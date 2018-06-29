@@ -23,7 +23,6 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
-
 ;;自定义按键
 ;;打开init 配置文件
 (global-set-key (kbd "<f2>") 'open-my-init-file)
