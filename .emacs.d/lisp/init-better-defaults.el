@@ -16,7 +16,10 @@
 					    ("jemail" "jimmy_ysy@163.com")
 					    ;;google邮箱地址
 					    ("jgmail" "jimmy.shiyuy@gmail.com")
-					    ))
+					    ;;qq
+					    ("jqq" "2806446853")
+					    ;;tel
+					    ("jtel" "13041102857")))
 ;;禁止备份文件
 (setq make-backup-files nil)
 ;;禁止自动保存
