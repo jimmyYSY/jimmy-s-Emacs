@@ -24,6 +24,10 @@
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 ;;自定义按键
+;;文本选择
+(global-set-key (kbd "C-c SPC") 'set-mark-command)
+;;复制文本
+(global-set-key (kbd "C-c w") 'kill-ring-save)
 ;;打开init 配置文件
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 ;;打开文件列表
@@ -42,12 +46,10 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 ;;文本补全
 (global-set-key (kbd "M-/") 'hippie-expand)
-;;复制文本
-;;(global-set-key (kbd "M-w") 'kill-ring-save))
 ;;增强occur 按键
 (global-set-key (kbd "M-s o") 'occur-dwim)
 ;;imenu自定义按键
-;;(global-set-key (kbd "M-s i") 'counsel-imenu)
+(global-set-key (kbd "M-s i") 'counsel-imenu)
 ;;raka remember
 ;;(global-set-key (kbd "C-c r") 'org-capture)
 ;;延迟加载dire
